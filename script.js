@@ -1,6 +1,7 @@
 const grid = document.querySelector(".grid-container");
 const reset = document.querySelector(".reset");
 const warning = document.querySelector(".warning");
+const select = document.querySelector(".select");
 
 let color = "black";
 
@@ -11,7 +12,7 @@ function gridLayout(size) {
   for (let i = 0; i < size * size; i++) {
     grid.appendChild(createGrid(800 / size));
   }
-  paint()
+  paint();
 }
 
 function changeSize(input) {
@@ -50,8 +51,6 @@ function changeColor(input) {
   color = input;
 }
 
-
-
 reset.addEventListener("click", () => {
   while (grid.hasChildNodes()) {
     grid.removeChild(grid.firstChild);
@@ -60,3 +59,11 @@ reset.addEventListener("click", () => {
 });
 
 gridLayout(16);
+
+select.addEventListener("click", () => {
+  if (warning.hasChildNodes()) {
+    setTimeout(function () {
+      warning.removeChild(warning.firstChild);
+    }, 3000);
+  }
+});
