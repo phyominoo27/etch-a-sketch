@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch A Sketch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="title">Etch A Sketch</div>
+      <div class="grid-container"></div>
+
+      <div class="button">
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="changeColor('random')">Random</button>
+        <button class="reset">Reset</button>
+
+        <div>
+          <input
+            type="text"
+            onchange="changeSize(this.value)"
+            placeholder="Put a No.between 1 to 100"
+         
+          />
+          <button>Select</button>
+        </div>
+      </div>
+      <div class="warning"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
